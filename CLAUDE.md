@@ -31,3 +31,8 @@
 ## 確認方法
 - `npm install` 後、`npm run dev` で開発サーバーを起動し、表示されたURLをブラウザで開いて確認する。
 - `npm run build` でビルドが通ることを確認する。
+
+## 公開（GitHub Pages）
+- `main` にプッシュすると GitHub Actions（`.github/workflows/deploy.yml`）が自動でビルド・公開する。
+- 公開URL：https://kay0614.github.io/task-board/
+- ビルド時のベースパスは `vite.config.js` の `base`（`/task-board/`）で設定している。リポジトリ名を変えた場合はここも変更する。
