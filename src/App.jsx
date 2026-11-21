@@ -4,8 +4,9 @@ const STORAGE_KEY = 'task-board:tasks';
 
 function loadTasks() {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    return saved ? JSON.parse(saved) : [];
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    // 想定外の形式のデータが入っていた場合は空から始める
+    return Array.isArray(saved) ? saved : [];
   } catch {
     return [];
   }
